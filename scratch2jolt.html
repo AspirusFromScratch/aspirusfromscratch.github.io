@@ -34,7 +34,7 @@ loadFile("https://aspirusfromscratch.github.io/template.html");
 
 function myFunction() {
 	var user_input = document.getElementById("input").value;
-	template.replace("<<1", user_input);
+	template.replace("&lt;&lt;1", user_input);
 	var htmlfile = new Blob([template],
                 { type: "text/plain;charset=utf-8" });
 	saveAs(htmlfile, "index.html");
