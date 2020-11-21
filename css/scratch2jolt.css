@@ -1,5 +1,11 @@
-body {
-	background-color: #e0e0e0;
+html {
+	background-color: #262626;
+	margin: 0;
+	background-image: url("https://aspirusfromscratch.github.io/background.png");
+	height: 100%; 
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .app {
