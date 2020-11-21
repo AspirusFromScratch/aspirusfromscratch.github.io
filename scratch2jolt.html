@@ -21,9 +21,10 @@ function loadFile(filePath) {
     xmlhttp.onload = function() {
         result = xmlhttp.responseText;
         console.log(result);
+        window.template = result;
         
     }
-    window.template = result;
+    
 }
 
 var template = null
