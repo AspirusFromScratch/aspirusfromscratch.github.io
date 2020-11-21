@@ -23,11 +23,11 @@ function loadFile(filePath) {
         console.log(result);
         
     }
-    return result;
+    window.template = result;
 }
 
-
-var template = loadFile("https://aspirusfromscratch.github.io/template.html");
+var template = null
+loadFile("https://aspirusfromscratch.github.io/template.html");
 
 
 function myFunction() {
