@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <link rel="stylesheet" href="css/scratch2jolt.css">
+</head>
 <body>
+<div class="app">
+<p>Project Name</p>
+<input style="display: block;" type="text" id="input1" value="">
+<p>Project Author</p>
+<input style="display: block;" type="text" id="input2" value="">
+<p>Project ID</p>
+<input style="display: block;" type="text" id="input3" value="">
 
-<p>Project ID </p>
-<input style="display: block;" type="text" id="input" value="">
 
-<button onclick="myFunction()">Generate HTML</button>
-<p>Wait 2 sec before clicking the button.</p>
+<button onclick="myFunction()">Create GameJolt Package</button>
+<p class="credit">Created by @Aspirus for D7 Studios</p>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 <script>
@@ -31,10 +39,11 @@ function loadFile(filePath) {
 var template = null
 loadFile("https://aspirusfromscratch.github.io/template.html");
 
-
 function myFunction() {
-	var user_input = document.getElementById("input").value;
-	template = template.replace("<<1", user_input)
+	template = template.replace("<<1", document.getElementById("input1").value);
+    template = template.replace("<<2", document.getElementById("input2").value);
+    template = template.replace("<<3", document.getElementById("input3").value);
+
 	var htmlfile = new Blob([template],
                 { type: "text/plain;charset=utf-8" });
 	saveAs(htmlfile, "index.html");
@@ -42,5 +51,6 @@ function myFunction() {
 
 
 </script>
+</div>
 </body>
 </html>
